@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "codezombiech.gitignore",
+    "mongodb.mongodb-vscode",
+    "rangav.vscode-thunder-client"
+  ]
+}

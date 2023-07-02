@@ -1,0 +1,125 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "MERN_backend_template",
+    "dateExported": "2023-07-02T18:20:30.384Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "6c8ae624-1794-4491-b980-8772794a979b",
+            "name": "api/documents",
+            "containerId": "",
+            "created": "2023-07-02T17:21:01.962Z",
+            "sortNum": 10000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "efb14a38-0b58-48e6-9407-ae7d244ad19b",
+            "colId": "53c26061-a51c-46f8-a2f4-d38bf3504245",
+            "containerId": "6c8ae624-1794-4491-b980-8772794a979b",
+            "name": "create",
+            "url": "http://127.0.0.1:3551/api/documents",
+            "method": "POST",
+            "sortNum": 15000,
+            "created": "2023-07-02T17:23:41.841Z",
+            "modified": "2023-07-02T18:13:15.178Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"title\":\"Test document 1\",\"text\":\"Lorem ipsum...\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ff1b6662-01d4-466d-813a-0678bc13a049",
+            "colId": "53c26061-a51c-46f8-a2f4-d38bf3504245",
+            "containerId": "",
+            "name": "test 404",
+            "url": "http://127.0.0.1:3551/asdfg",
+            "method": "GET",
+            "sortNum": 25000,
+            "created": "2023-07-02T18:07:48.187Z",
+            "modified": "2023-07-02T18:08:11.776Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "33ed81cb-4a44-455a-a69f-0ae3e5eb4fc4",
+            "colId": "53c26061-a51c-46f8-a2f4-d38bf3504245",
+            "containerId": "6c8ae624-1794-4491-b980-8772794a979b",
+            "name": "read all",
+            "url": "http://127.0.0.1:3551/api/documents",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-07-02T17:23:22.178Z",
+            "modified": "2023-07-02T18:07:04.104Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "067e5ff1-a4db-4067-8e44-a314985797da",
+            "colId": "53c26061-a51c-46f8-a2f4-d38bf3504245",
+            "containerId": "6c8ae624-1794-4491-b980-8772794a979b",
+            "name": "read by ID",
+            "url": "http://127.0.0.1:3551/api/documents/64a1be2123e6125b4b0be4c9",
+            "method": "GET",
+            "sortNum": 35000,
+            "created": "2023-07-02T17:25:28.793Z",
+            "modified": "2023-07-02T18:13:47.557Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "95074e53-c8f8-474f-ac9e-a2ebdc46e2e1",
+            "colId": "53c26061-a51c-46f8-a2f4-d38bf3504245",
+            "containerId": "",
+            "name": "test 500",
+            "url": "http://127.0.0.1:3551/error",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-07-02T18:07:16.794Z",
+            "modified": "2023-07-02T18:07:25.550Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "3cb8081f-f7fe-4e5a-9e36-431e74fb7d4a",
+            "colId": "53c26061-a51c-46f8-a2f4-d38bf3504245",
+            "containerId": "6c8ae624-1794-4491-b980-8772794a979b",
+            "name": "update",
+            "url": "http://127.0.0.1:3551/api/documents/64a1be2123e6125b4b0be4c9",
+            "method": "PATCH",
+            "sortNum": 50000,
+            "created": "2023-07-02T18:07:32.442Z",
+            "modified": "2023-07-02T18:14:24.664Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"title\":\"Test document asdfg\",\"text\":\"Lorem asdfg...\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a2908a2c-1d1b-413e-afd0-ddcf1220b3a0",
+            "colId": "53c26061-a51c-46f8-a2f4-d38bf3504245",
+            "containerId": "6c8ae624-1794-4491-b980-8772794a979b",
+            "name": "delete",
+            "url": "http://127.0.0.1:3551/api/documents/64a1be2123e6125b4b0be4c9",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2023-07-02T18:12:23.788Z",
+            "modified": "2023-07-02T18:14:33.617Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
