@@ -41,6 +41,12 @@ async function createDocument(req, res) {
     if (!title || !text) {
       return res.status(400).json({ message: "All fields are required" });
     }
+    const duplicate = await Document.findOne({ "title": title });
+    if (duplicate) {
+      return res
+        .status(409)
+        .json({ message: `Document with title ${title} already exists` });
+    }
     const result = await Document.create({ title, text });
     if (result) {
       return res.status(200).json({ message: "Document created" });
@@ -64,7 +70,15 @@ async function updateDocument(req, res) {
       return res.status(400).json({ message: "Nothing to update" });
     }
     const updateQuery = {};
-    if (title) updateQuery.title = title;
+    if (title) {
+      const duplicate = await Document.findOne({ "title": title });
+      if (duplicate && duplicate._id.toString() !== _id.toString()) {
+        return res
+          .status(409)
+          .json({ message: `Document with title ${title} already exists` });
+      }
+      updateQuery.title = title;
+    }
     if (text) updateQuery.text = text;
     const result = await Document.findByIdAndUpdate(_id, updateQuery);
     if (result) {
