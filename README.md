@@ -18,7 +18,7 @@
 # Requirements
 
 - [Node, NPM](https://nodejs.org/en)
-- Valid MongoDB connection string
+- Valid [MongoDB](https://www.mongodb.com/) connection string
 - Optional: recommended VS Code extensions: `.vscode/extensions.json`
 
 # Install
