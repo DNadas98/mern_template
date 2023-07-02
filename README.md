@@ -1,4 +1,4 @@
-# [Server side template for MERN projects](https://github.com/DNadas98/mern_backend_template)
+# Server side template for MERN projects
 
 - [Express JS](https://expressjs.com/) server
   - [express-rate-limit](https://www.npmjs.com/package/express-rate-limit)
