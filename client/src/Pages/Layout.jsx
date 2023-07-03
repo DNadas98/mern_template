@@ -11,9 +11,7 @@ function Layout() {
   return (
     <div className="Layout">
       <header>
-        <nav>
-          <NavBar />
-        </nav>
+        <NavBar />
       </header>
       <main>
         <Outlet />

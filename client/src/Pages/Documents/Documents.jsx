@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { apiFetch } from "../../functions/apiFetch";
 import DocumentsTable from "../../components/documents/DocumentsTable";
 import Confirm from "../../components/utility/Confirm";
+import "../../style/documents.css";
 
 function DocumentsList() {
   const [loading, setLoading] = useState(null);

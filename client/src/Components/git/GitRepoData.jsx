@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import LoadingSpinner from "../utility/LoadingSpinner";
 import "../../style/git.css";
-import GitUser from "./GitUser";
 import GitRepo from "./GitRepo";
 
 function GitRepoData({ user, repo }) {
@@ -28,8 +27,7 @@ function GitRepoData({ user, repo }) {
     return <LoadingSpinner />;
   } else if (gitData) {
     return (
-      <div className="GitRepoData row">
-        <GitUser user={gitData?.owner} />
+      <div className="GitRepoData column">
         <GitRepo repo={gitData} />
       </div>
     );

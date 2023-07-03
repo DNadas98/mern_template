@@ -1,4 +1,5 @@
 import React from "react";
+import "../../style/confirm.css";
 
 function Confirm({ message, onConfirm, setConfirmMessage }) {
   return (

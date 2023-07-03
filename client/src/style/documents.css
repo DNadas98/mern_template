@@ -1,0 +1,39 @@
+table {
+  white-space: nowrap;
+  width: 80vw;
+  max-width: 50rem;
+  min-width: 27rem;
+  text-align: left;
+  padding: 1rem;
+  border: 2px solid var(--mid);
+  border-radius: 1rem;
+}
+
+th {
+  text-align: center;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+td {
+  padding: 1rem;
+}
+
+table button {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.Title {
+  text-align: left;
+  padding-left: 1rem;
+}
+
+th {
+  border-bottom: 2px solid var(--mid);
+}
+
+td .ReactMarkdown {
+  white-space: normal;
+  max-width: 27rem;
+}

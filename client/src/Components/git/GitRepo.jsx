@@ -2,31 +2,61 @@ import React from "react";
 import { format } from "date-fns";
 
 function GitRepo({ repo }) {
+  console.log(repo);
   return (
-    <div className="GitRepo">
-      <h1>
-        <a rel="noreferrer" target="_blank" href={repo?.html_url} className="fade">
-          {repo?.name}
-        </a>
-      </h1>
-      <pre>
-        <ul>
-          <li>
-            <p>Main language: {repo?.language}</p>
-          </li>
-          {repo?.stargazers_count >= 1 && <li>Stars: {repo?.stargazers_count}</li>}
-          {repo?.watchers_count >= 1 && <li>Watchers: {repo?.watchers_count}</li>}
-          {repo?.open_issues_count >= 1 && (
-            <li>Open Issues: {repo?.open_issues_count}</li>
-          )}
-          {repo?.forks_count >= 1 && <li>Forks: {repo?.forks_count}</li>}
-          <li>Created At: {format(new Date(repo?.created_at), "yyyy. MM. dd. hh:mm")}</li>
-          <li>
-            Last update: {format(new Date(repo?.updated_at), "yyyy. MM. dd. hh:mm")}
-          </li>
-        </ul>
-      </pre>
-    </div>
+    <>
+      <div className="GitRepoTitle row">
+        <img src={repo?.owner?.avatar_url} alt="profile_picture" />
+        <div className="column">
+          <h2>{repo?.owner?.login}</h2>
+          <a rel="noreferrer" target="_blank" href={repo?.html_url} className="fade">
+            <h1>{repo?.name}</h1>
+          </a>
+        </div>
+      </div>
+      <div className="GitRepoDetails">
+        <table>
+          <tbody>
+            <tr>
+              <td className="right">Main language</td>
+              <td>{repo?.language}</td>
+            </tr>
+            <tr>
+              <td className="right">Created At</td>
+              <td>{format(new Date(repo?.created_at), "yyyy.MM.dd hh:mm")}</td>
+            </tr>
+            <tr>
+              <td className="right">Last update</td>
+              <td>{format(new Date(repo?.pushed_at), "yyyy.MM.dd hh:mm")}</td>
+            </tr>
+            {repo?.stargazers_count >= 1 && (
+              <tr>
+                <td className="right">Stars</td>
+                <td>{repo?.stargazers_count}</td>
+              </tr>
+            )}
+            {repo?.watchers_count >= 1 && (
+              <tr>
+                <td className="right">Watchers</td>
+                <td>{repo?.watchers_count}</td>
+              </tr>
+            )}
+            {repo?.open_issues_count >= 1 && (
+              <tr>
+                <td className="right">Open Issues</td>
+                <td>{repo?.open_issues_count}</td>
+              </tr>
+            )}
+            {repo?.forks_count >= 1 && (
+              <tr>
+                <td className="right">Forks</td>
+                <td>{repo?.forks_count}</td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
+    </>
   );
 }
 

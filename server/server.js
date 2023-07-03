@@ -25,7 +25,6 @@ server.use(cors(corsConfig));
 //Built-in middleware to handle form data, JSON and static files
 server.use(express.urlencoded({ extended: true }));
 server.use(express.json());
-server.use("/static", express.static(path.join(__dirname, "view/static")));
 
 //Request logger middleware
 server.use(logRequest);
@@ -40,11 +39,13 @@ server.get("/error", (req, res, next) => {
   throw new Error("");
 });
 
+//serve build
+server.use("/static", express.static(path.join(__dirname, "../client/build/static")));
 server.get("/*", (req, res, next) => {
   try {
     res.status(200);
     logServed(req, res);
-    return res.sendFile(path.join(__dirname, "view/index.html"));
+    return res.sendFile(path.join(__dirname, "../client/build/index.html"));
   } catch (err) {
     return next(err);
   }
