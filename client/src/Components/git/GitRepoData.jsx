@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import LoadingSpinner from "../utility/LoadingSpinner";
 import "../../style/git.css";
-import GitRepo from "./GitRepo";
+import GitRepo from "./GitRepoDetails";
 
 function GitRepoData({ user, repo }) {
   const [loading, setLoading] = useState(null);

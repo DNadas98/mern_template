@@ -23,11 +23,11 @@ function GitRepo({ repo }) {
             </tr>
             <tr>
               <td className="right">Created At</td>
-              <td>{format(new Date(repo?.created_at), "yyyy.MM.dd hh:mm")}</td>
+              <td>{format(new Date(repo?.created_at), "yyyy.MM.dd HH:mm")}</td>
             </tr>
             <tr>
               <td className="right">Last update</td>
-              <td>{format(new Date(repo?.pushed_at), "yyyy.MM.dd hh:mm")}</td>
+              <td>{format(new Date(repo?.pushed_at), "yyyy.MM.dd HH:mm")}</td>
             </tr>
             {repo?.stargazers_count >= 1 && (
               <tr>

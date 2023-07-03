@@ -6,8 +6,7 @@ function Home() {
   const user = "DNadas98";
   const repo = "mern_template";
   const [file, setFile] = useState({ path: "README.md", language: "markdown" });
-  /*const filePath = "server/server.js";
-  const language = "javascript";*/
+
   return (
     <div className="Home column">
       <GitRepoData user={user} repo={repo} />
