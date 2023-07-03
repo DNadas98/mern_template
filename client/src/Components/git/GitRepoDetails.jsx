@@ -22,7 +22,7 @@ function GitRepo({ repo }) {
               <td>{repo?.language}</td>
             </tr>
             <tr>
-              <td className="right">Created At</td>
+              <td className="right">Created at</td>
               <td>{format(new Date(repo?.created_at), "yyyy.MM.dd HH:mm")}</td>
             </tr>
             <tr>
