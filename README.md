@@ -15,6 +15,7 @@
 - [React](https://react.dev/) frontend
   - [React Router](https://reactrouter.com/en/main)
   - [react-markdown](https://github.com/remarkjs/react-markdown)
+  - [react-syntax-highlighter](https://github.com/react-syntax-highlighter/react-syntax-highlighter)
   - [react-spinners](https://www.npmjs.com/package/react-spinners)
   - Home: Github open API
     - repository data: owner, name, stats
