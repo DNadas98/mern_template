@@ -12,7 +12,8 @@ function DocumentForm({ onSubmit, document }) {
           type="text"
           id="title"
           name="title"
-          defaultValue={document?.title ? document.title : "Enter title"}
+          placeholder="Enter title"
+          defaultValue={document?.title ? document.title : ""}
         />
       </div>
       <div>
@@ -22,7 +23,8 @@ function DocumentForm({ onSubmit, document }) {
         <textarea
           id="text"
           name="text"
-          defaultValue={document?.text ? document.text : "Enter text"}
+          placeholder="Enter text"
+          defaultValue={document?.text ? document.text : ""}
         />
       </div>
       <div>

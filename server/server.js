@@ -25,6 +25,7 @@ server.use(cors(corsConfig));
 //Built-in middleware to handle form data, JSON and static files
 server.use(express.urlencoded({ extended: true }));
 server.use(express.json());
+server.use("/static", express.static(path.join(__dirname, "view/static")));
 
 //Request logger middleware
 server.use(logRequest);
@@ -37,6 +38,16 @@ server.use("/api/documents", documentsRouter);
 // eslint-disable-next-line no-unused-vars
 server.get("/error", (req, res, next) => {
   throw new Error("");
+});
+
+server.get("/*", (req, res, next) => {
+  try {
+    res.status(200);
+    logServed(req, res);
+    return res.sendFile(path.join(__dirname, "view/index.html"));
+  } catch (err) {
+    return next(err);
+  }
 });
 
 //404 - Not Found
