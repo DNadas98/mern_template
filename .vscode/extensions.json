@@ -3,6 +3,7 @@
     "dbaeumer.vscode-eslint",
     "codezombiech.gitignore",
     "mongodb.mongodb-vscode",
-    "rangav.vscode-thunder-client"
+    "rangav.vscode-thunder-client",
+    "rodrigovallades.es7-react-js-snippets"
   ]
 }

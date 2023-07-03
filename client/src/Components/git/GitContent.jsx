@@ -45,7 +45,7 @@ function GitMarkdownContent({ user, repo, filePath }) {
         </pre>
       </div>
     ) : (
-      <div className="GitMarkdownContent">
+      <div className="GitCodeContent">
         <pre>
           <code>{gitContent.content}</code>
         </pre>
