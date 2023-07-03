@@ -1,4 +1,5 @@
 const path = require("path");
+const fs = require("fs");
 require("dotenv").config({ path: path.join(__dirname, "config/config.env") });
 const express = require("express");
 const mongoose = require("mongoose");
@@ -43,9 +44,12 @@ server.get("/error", (req, res, next) => {
 server.use("/static", express.static(path.join(__dirname, "../client/build/static")));
 server.get("/*", (req, res, next) => {
   try {
-    res.status(200);
-    logServed(req, res);
-    return res.sendFile(path.join(__dirname, "../client/build/index.html"));
+    if (fs.existsSync(path.join(__dirname, "../client/build/index.html"))) {
+      res.status(200);
+      logServed(req, res);
+      return res.sendFile(path.join(__dirname, "../client/build/index.html"));
+    }
+    return next();
   } catch (err) {
     return next(err);
   }
