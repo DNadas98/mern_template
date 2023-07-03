@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import LoadingSpinner from "../utility/LoadingSpinner";
 import "../../style/git.css";
-import GitRepo from "./GitRepoDetails";
+import GitRepoDetails from "./GitRepoDetails";
 
 function GitRepoData({ user, repo }) {
   const [loading, setLoading] = useState(null);
@@ -28,7 +28,18 @@ function GitRepoData({ user, repo }) {
   } else if (gitData) {
     return (
       <div className="GitRepoData column">
-        <GitRepo repo={gitData} />
+        <GitRepoDetails repo={gitData} />
+        <p>
+          Source:{" "}
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://docs.github.com/en/rest?apiVersion=2022-11-28"
+            className="blue"
+          >
+            GitHub REST API
+          </a>
+        </p>
       </div>
     );
   } else if (user && repo) {

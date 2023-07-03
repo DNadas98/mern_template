@@ -5,7 +5,7 @@ import remarkGfm from "remark-gfm";
 function DocumentRow({ document, onEdit, onDelete }) {
   const [showText, setShowText] = useState(false);
   return (
-    <React.Fragment key={document._id}>
+    <>
       <tr key={`${document._id}-title`}>
         <td>
           <h2>{document.title}</h2>
@@ -51,7 +51,7 @@ function DocumentRow({ document, onEdit, onDelete }) {
           </td>
         </tr>
       )}
-    </React.Fragment>
+    </>
   );
 }
 

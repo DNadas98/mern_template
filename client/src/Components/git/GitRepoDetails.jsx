@@ -1,15 +1,14 @@
 import React from "react";
 import { format } from "date-fns";
 
-function GitRepo({ repo }) {
-  console.log(repo);
+function GitRepoDetails({ repo }) {
   return (
     <>
       <div className="GitRepoTitle row">
         <img src={repo?.owner?.avatar_url} alt="profile_picture" />
         <div className="column">
           <h2>{repo?.owner?.login}</h2>
-          <a rel="noreferrer" target="_blank" href={repo?.html_url} className="fade">
+          <a rel="noreferrer" target="_blank" href={repo?.html_url} className="blue">
             <h1>{repo?.name}</h1>
           </a>
         </div>
@@ -60,4 +59,4 @@ function GitRepo({ repo }) {
   );
 }
 
-export default GitRepo;
+export default GitRepoDetails;

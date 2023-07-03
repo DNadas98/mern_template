@@ -76,13 +76,14 @@ function DocumentsList() {
           setConfirmMessage={setConfirmMessage}
         />
       )}
-      <h1>Documents</h1>
+      <h1>Documents App</h1>
       <div className="row">
         <Link to="/documents/create">
           <button>New Document</button>
         </Link>
         <input
           type="search"
+          name="searchfield"
           placeholder="Search"
           value={searchFilter}
           onChange={(event) => {

@@ -5,7 +5,7 @@ function Footer({ pageTitle, name, link }) {
   return (
     <h3>
       {pageTitle} | {year} ©{" "}
-      <a rel="noreferrer" target="_blank" href={link} className="fade">
+      <a rel="noreferrer" target="_blank" href={link} className="blue">
         {name}
       </a>
     </h3>
