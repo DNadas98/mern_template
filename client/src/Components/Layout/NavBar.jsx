@@ -1,14 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import NavButton from "./NavButton";
 
 function NavBar() {
+  const current = useLocation().pathname;
   return (
     <ul className="NavBar">
-      <li className="menuButton">
-        <button>
-          <Link to="/">Home</Link>
-        </button>
-      </li>
+      <NavButton path="/" text="Home" current={current} />
+      <NavButton path="/documents" text="Documents" current={current} />
+      <NavButton path="/asdfg" text="Test 404" current={current} />
+      <NavButton path="/test-error" text="Test Error" current={current} />
     </ul>
   );
 }

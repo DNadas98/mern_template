@@ -70,7 +70,7 @@ async function updateDocument(req, res) {
       return res.status(400).json({ message: "Nothing to update" });
     }
     const updateQuery = {};
-    if (title) {
+    if (title?.length >= 1) {
       const duplicate = await Document.findOne({ "title": title });
       if (duplicate && duplicate._id.toString() !== _id.toString()) {
         return res
@@ -79,7 +79,7 @@ async function updateDocument(req, res) {
       }
       updateQuery.title = title;
     }
-    if (text) updateQuery.text = text;
+    if (text?.length >= 1) updateQuery.text = text;
     const result = await Document.findByIdAndUpdate(_id, updateQuery);
     if (result) {
       return res.status(200).json({ message: "Document updated" });

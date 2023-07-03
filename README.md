@@ -38,17 +38,18 @@
 ### Frontend
 
 - `cd client && npm i`
-- optionally: `npm build`
+- Rename `env-sample.txt` to `.env`
+- Optionally: `npm build`
 
 # Run
 
 ### Backend
 
-- in server folder:
+- In server folder:
   - nodemon: `npm run dev`
   - node: `npm start`
 
 ### Frontend
 
-- in client folder:
+- In client folder:
   - `npm start`

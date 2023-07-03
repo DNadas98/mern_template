@@ -1,6 +1,6 @@
 IP=127.0.0.1
 PORT=3551
 FRONTEND_URL=http://localhost:3552
-DB_CONN_STR=mongodb://127.0.0.1:27017/dbName?retryWrites=true
+DB_CONN_STR=mongodb://127.0.0.1:27017/templatedb?retryWrites=true
 LIMITER_MS=600000
 LIMITER_MAX=200

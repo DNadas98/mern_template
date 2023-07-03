@@ -1,10 +1,14 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-function BackButton() {
+function BackButton({ path }) {
   const navigate = useNavigate();
 
-  return <button onClick={() => navigate(-1)}>Back</button>;
+  return (
+    <button type="button" onClick={() => navigate(path ? path : -1)}>
+      Back
+    </button>
+  );
 }
 
 export default BackButton;

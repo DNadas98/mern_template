@@ -1,11 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Layout from "./Pages/Layout";
-import ErrorPage from "./Pages/ErrorPage";
-import NotFound from "./Pages/NotFound";
-import Home from "./Pages/Home";
-import TestError from "./Pages/TestError";
+
+import "./style/index.css";
+
+import Layout from "./pages/Layout";
+import ErrorPage from "./pages/ErrorPage";
+import NotFound from "./pages/NotFound";
+import Home from "./pages/Home";
+import TestError from "./pages/TestError";
+import DocumentsList from "./pages/documents/Documents";
+import CreateDocument from "./pages/documents/CreateDocument";
+import UpdateDocument from "./pages/documents/UpdateDocument";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +22,18 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />
+      },
+      {
+        path: "/documents",
+        element: <DocumentsList />
+      },
+      {
+        path: "/documents/create",
+        element: <CreateDocument />
+      },
+      {
+        path: "/documents/update/:id",
+        element: <UpdateDocument />
       },
       {
         path: "/test-error",
