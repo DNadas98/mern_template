@@ -86,6 +86,9 @@ pre.GitCodeContent {
 .GitMarkdownContent {
   color: rgb(220, 220, 220);
   background-color: rgb(30, 30, 30);
+  --codeColor: blurrywood;
+  --linkColor: var(--mid);
+
   min-width: 35rem;
   max-width: 50rem;
 }
@@ -116,12 +119,12 @@ pre.GitCodeContent {
 }
 
 .ReactMarkdown code {
-  color: burlywood;
+  color: var(--codeColor);
 }
 
 .ReactMarkdown a {
   opacity: 1;
-  color: var(--mid);
+  color: var(--linkColor);
   transition: var(--transitionSpeed);
 }
 
