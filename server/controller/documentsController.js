@@ -49,7 +49,7 @@ async function createDocument(req, res) {
     }
     const result = await Document.create({ title, text });
     if (!result) {
-      throw new Error("");
+      throw new Error();
     }
     return res.status(200).json({ message: "Document created" });
   } catch (err) {
@@ -82,7 +82,7 @@ async function updateDocument(req, res) {
     if (text?.length >= 1) updateQuery.text = text;
     const result = await Document.findByIdAndUpdate(_id, updateQuery);
     if (!result) {
-      throw new Error("");
+      throw new Error();
     }
     return res.status(200).json({ message: "Document updated" });
   } catch (err) {
