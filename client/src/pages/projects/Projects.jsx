@@ -29,35 +29,35 @@ function Projects() {
 
   return (
     <div className="Projects column">
-      <div className="info"></div>
       <h1>Project Showroom</h1>
-      <p>
-        A{" "}
-        <a
-          rel="noreferrer"
-          target="_blank"
-          href="https://docs.github.com/en/rest?apiVersion=2022-11-28"
-          className="blue"
-        >
-          GitHub REST API
-        </a>{" "}
-        integration I have developed to dynamically present my projects through a
-        full-stack web application.
-      </p>
-      <p>
-        My API stores and manages project details such as the username, project name and
-        file paths for the projects in the database, enabling{" "}
-        <a
-          rel="noreferrer"
-          target="_blank"
-          href="https://docs.github.com/en/rest?apiVersion=2022-11-28"
-          className="blue"
-        >
-          CRUD operations
-        </a>{" "}
-        and retrieving project information using this data.
-      </p>
-      <p></p>
+      <div className="Info column">
+        <p>
+          A{" "}
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://docs.github.com/en/rest?apiVersion=2022-11-28"
+            className="blue"
+          >
+            GitHub REST API
+          </a>{" "}
+          integration I have developed to dynamically present my projects through a
+          full-stack web application.
+        </p>
+        <p>
+          My API stores and manages project details such as the username, project name and
+          file paths for the projects in the database, enabling{" "}
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://docs.github.com/en/rest?apiVersion=2022-11-28"
+            className="blue"
+          >
+            CRUD operations
+          </a>{" "}
+          and retrieving project information using this data.
+        </p>
+      </div>
       {loading ? (
         <LoadingSpinner />
       ) : selectedProject ? (
