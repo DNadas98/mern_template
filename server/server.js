@@ -11,6 +11,7 @@ const banHandler = require("./middleware/banHandler");
 const cors = require("cors");
 const corsConfig = require("./config/corsConfig");
 const { logRequest, logServed, logError } = require("./middleware/logger");
+const projectsRouter = require("./routes/api/projectsRouter");
 const documentsRouter = require("./routes/api/documentsRouter");
 
 const server = express();
@@ -32,6 +33,7 @@ server.use(logRequest);
 
 //Routing
 
+server.use("/api/projects", projectsRouter);
 server.use("/api/documents", documentsRouter);
 
 //test server error route
