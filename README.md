@@ -1,5 +1,9 @@
 # Template for MERN projects
 
+- Home page: Example for fetching and displaying data from an open API
+  - source: [GitHub REST API](https://docs.github.com/en/rest)
+- Documents: Example CRUD App
+
 - [Express JS](https://expressjs.com/) server
   - [express-rate-limit](https://www.npmjs.com/package/express-rate-limit)
   - [helmet](https://www.npmjs.com/package/helmet)
