@@ -1,11 +1,16 @@
 import React from "react";
 
 function GitContentSelectorButton({ selectedFile, setSelectedFile, path, language }) {
+  const isSelected = selectedFile?.path === path;
   return (
     <button
-      disabled={selectedFile?.path === path}
+      className={isSelected ? "selected" : ""}
       onClick={() => {
-        setSelectedFile({ path: path, language: language });
+        if (!isSelected) {
+          setSelectedFile({ path: path, language: language });
+        } else {
+          setSelectedFile(null);
+        }
       }}
     >
       {path.split("/")[path.split("/").length - 1]}

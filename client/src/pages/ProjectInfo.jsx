@@ -7,29 +7,38 @@ function ProjectInfo() {
   const user = "DNadas98";
   const repo = "mern_template";
   const files = [
-    { path: "README.md", language: "markdown" },
+    { path: "readme.md", language: "markdown" },
     { path: "server/server.js", language: "javascript" },
+    {
+      path: "client/src/index.js",
+      language: "javascript"
+    },
     {
       path: "client/src/pages/documents/Documents.jsx",
       language: "javascript"
     }
   ];
-  const [selectedFile, setSelectedFile] = useState(files[0]);
+  const [selectedFile, setSelectedFile] = useState(null);
 
   return (
     <div className="ProjectInfo column">
       <GitRepoData user={user} repo={repo} />
+      <p>Example files from this repository:</p>
       <GitContentSelector
         files={files}
         selectedFile={selectedFile}
         setSelectedFile={setSelectedFile}
       />
-      <GitContent
-        user={user}
-        repo={repo}
-        filePath={selectedFile.path}
-        language={selectedFile.language}
-      />
+      {selectedFile ? (
+        <GitContent
+          user={user}
+          repo={repo}
+          filePath={selectedFile?.path}
+          language={selectedFile?.language}
+        />
+      ) : (
+        <p>Select a file to view its content!</p>
+      )}
     </div>
   );
 }

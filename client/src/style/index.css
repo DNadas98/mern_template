@@ -217,6 +217,10 @@ button:disabled {
   color: var(--dark);
 }
 
+button.selected {
+  border: 2px solid var(--mid);
+}
+
 a.blue {
   opacity: 1;
   color: var(--mid);
@@ -224,11 +228,11 @@ a.blue {
 }
 
 a.blue:hover {
-  opacity: 0.75;
+  opacity: 0.8;
 }
 
 a.blue:active {
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 footer a.blue {
@@ -261,7 +265,7 @@ form div {
 .row {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 1rem;
