@@ -11,7 +11,9 @@ function GitRepoData({ user, repo }) {
     async function getData() {
       try {
         setLoading(true);
-        const httpResponse = await fetch(`https://api.github.com/repos/${user}/${repo}`);
+        const httpResponse = await fetch(
+          `${process.env.REACT_APP_OPEN_API_URL}/repos/${user}/${repo}`
+        );
         const responseObject = await httpResponse.json();
         setGitData(responseObject);
       } catch (error) {
@@ -51,9 +53,9 @@ function GitRepoData({ user, repo }) {
             rel="noreferrer"
             target="_blank"
             href={`https://github.com/${user}/${repo}`}
-            className="fade"
+            className="blue"
           >
-            git repository
+            GitHub repository
           </a>{" "}
           of this Project!
         </h3>

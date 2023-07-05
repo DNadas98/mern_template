@@ -15,13 +15,17 @@ function GitMarkdownContent({ user, repo, filePath, language }) {
       try {
         setLoading(true);
         const httpResponse = await fetch(
-          `https://api.github.com/repos/${user}/${repo}/contents/${filePath}`
+          `${process.env.REACT_APP_OPEN_API_URL}/repos/${user}/${repo}/contents/${filePath}`
         );
+        if (httpResponse?.status === 404) {
+          throw new Error("Not Found");
+        }
         const responseObject = await httpResponse.json();
         const content = atob(responseObject?.content);
         setGitContent(content);
       } catch (error) {
-        console.error("Error fetching README:", error);
+        console.error(error);
+        setGitContent(null);
       } finally {
         setLoading(false);
       }
@@ -65,7 +69,7 @@ function GitMarkdownContent({ user, repo, filePath, language }) {
           rel="noreferrer"
           target="_blank"
           href={`https://github.com/${user}/${repo}`}
-          className="fade"
+          className="blue"
         >
           git repository
         </a>
