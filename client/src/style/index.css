@@ -239,6 +239,11 @@ footer a.blue {
   color: var(--darkest);
 }
 
+p {
+  max-width: 50rem;
+  text-align: justify;
+}
+
 .green {
   color: var(--green);
 }

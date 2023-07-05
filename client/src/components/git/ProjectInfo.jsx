@@ -1,25 +1,10 @@
 import React, { useState } from "react";
-import GitContent from "../components/git/GitContent";
-import GitRepoData from "../components/git/GitRepoData";
-import GitContentSelector from "../components/git/GitContentSelector";
+import GitContent from "./GitContent";
+import GitRepoData from "./GitRepoData";
+import GitContentSelector from "./GitContentSelector";
 
-function ProjectInfo() {
-  const user = "DNadas98";
-  const repo = "mern_template";
-  const files = [
-    { path: "readme.md", language: "markdown" },
-    { path: "server/server.js", language: "javascript" },
-    {
-      path: "client/src/index.js",
-      language: "javascript"
-    },
-    {
-      path: "client/src/pages/documents/Documents.jsx",
-      language: "javascript"
-    }
-  ];
+function ProjectInfo({ user, repo, files }) {
   const [selectedFile, setSelectedFile] = useState(null);
-
   return (
     <div className="ProjectInfo column">
       <GitRepoData user={user} repo={repo} />

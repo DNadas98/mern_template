@@ -31,17 +31,6 @@ function GitRepoData({ user, repo }) {
     return (
       <div className="GitRepoData column">
         <GitRepoDetails repo={gitData} />
-        <p>
-          Source:{" "}
-          <a
-            rel="noreferrer"
-            target="_blank"
-            href="https://docs.github.com/en/rest?apiVersion=2022-11-28"
-            className="blue"
-          >
-            GitHub REST API
-          </a>
-        </p>
       </div>
     );
   } else if (user && repo) {

@@ -7,7 +7,7 @@ import "./style/index.css";
 import Layout from "./pages/Layout";
 import ErrorPage from "./pages/ErrorPage";
 import NotFound from "./pages/NotFound";
-import ProjectInfo from "./pages/ProjectInfo";
+import Projects from "./pages/projects/Projects";
 import TestError from "./pages/TestError";
 import DocumentsList from "./pages/documents/Documents";
 import CreateDocument from "./pages/documents/CreateDocument";
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <ProjectInfo />
+        element: <Projects />
       },
       {
         path: "/documents",
