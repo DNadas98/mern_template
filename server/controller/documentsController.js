@@ -48,10 +48,10 @@ async function createDocument(req, res) {
         .json({ message: `Document with title ${title} already exists` });
     }
     const result = await Document.create({ title, text });
-    if (result) {
-      return res.status(200).json({ message: "Document created" });
+    if (!result) {
+      throw new Error("");
     }
-    return res.status(404).json({ message: "No documents found" });
+    return res.status(200).json({ message: "Document created" });
   } catch (err) {
     logError(err, req);
     return res.status(400).json({ message: "Failed to create document" });
@@ -81,10 +81,10 @@ async function updateDocument(req, res) {
     }
     if (text?.length >= 1) updateQuery.text = text;
     const result = await Document.findByIdAndUpdate(_id, updateQuery);
-    if (result) {
-      return res.status(200).json({ message: "Document updated" });
+    if (!result) {
+      throw new Error("");
     }
-    throw new Error();
+    return res.status(200).json({ message: "Document updated" });
   } catch (err) {
     logError(err, req);
     return res.status(400).json({ message: "Failed to update document" });
@@ -99,10 +99,10 @@ async function deleteDocument(req, res) {
       return res.status(400).json({ message: "Invalid document ID" });
     }
     const result = await Document.findByIdAndDelete(_id).lean();
-    if (result) {
-      return res.status(200).json({ message: "Document deleted" });
+    if (!result) {
+      throw new Error();
     }
-    throw new Error();
+    return res.status(200).json({ message: "Document deleted" });
   } catch (err) {
     logError(err, req);
     return res.status(400).json({ message: "Failed to delete document" });
