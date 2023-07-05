@@ -1,8 +1,15 @@
 # Template for MERN projects
 
-- Home page: Example for fetching and displaying data from an open API
-  - source: [GitHub REST API](https://docs.github.com/en/rest)
-- Documents: Example CRUD App
+### Home page
+
+- Example for fetching and displaying data from an open API
+- source: [GitHub REST API](https://docs.github.com/en/rest)
+
+### Documents
+
+- Simple full-stack CRUD app
+
+### Tech used
 
 - [Express JS](https://expressjs.com/) server
   - [express-rate-limit](https://www.npmjs.com/package/express-rate-limit)
@@ -10,20 +17,11 @@
   - [cors](https://www.npmjs.com/package/cors)
 - [MongoDB](https://www.mongodb.com/), [Mongoose JS](https://mongoosejs.com/docs/guide.html)
 - [Model View Controller](https://developer.mozilla.org/en-US/docs/Glossary/MVC) design pattern
-- Example CRUD API:
-
-  - Router: `server/routes/documentsRouter.js`
-  - Controller: `server/controller/documentsController.js`
-  - Model: `server/model/Document.js`
-
 - [React](https://react.dev/) frontend
   - [React Router](https://reactrouter.com/en/main)
   - [react-markdown](https://github.com/remarkjs/react-markdown)
   - [react-syntax-highlighter](https://github.com/react-syntax-highlighter/react-syntax-highlighter)
   - [react-spinners](https://www.npmjs.com/package/react-spinners)
-  - Home: Github open API
-    - repository data: owner, name, stats
-    - readme file in md format
 
 # Requirements
 
