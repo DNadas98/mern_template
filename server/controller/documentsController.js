@@ -3,7 +3,7 @@ const { isValidObjectId } = require("mongoose");
 const { logError } = require("../middleware/logger");
 
 //GET /api/documents/
-async function readAllDocuments(req, res) {
+async function readAllDocuments(req, res, next) {
   try {
     const documents = await Document.find().select("-__v").lean();
     if (documents?.length >= 1) {
@@ -12,12 +12,12 @@ async function readAllDocuments(req, res) {
     return res.status(404).json({ message: "No documents found" });
   } catch (err) {
     logError(err, req);
-    return res.status(500).json({ message: "Unable to read documents" });
+    return next(err);
   }
 }
 
 //GET /api/documents/:id
-async function readDocumentById(req, res) {
+async function readDocumentById(req, res, next) {
   try {
     const _id = decodeURI(req?.params?.id);
     if (!_id || !isValidObjectId(_id)) {
@@ -30,7 +30,7 @@ async function readDocumentById(req, res) {
     return res.status(404).json({ message: "Document not found" });
   } catch (err) {
     logError(err, req);
-    return res.status(500).json({ message: "Unable to read document" });
+    return next(err);
   }
 }
 
@@ -54,7 +54,7 @@ async function createDocument(req, res) {
     return res.status(404).json({ message: "No documents found" });
   } catch (err) {
     logError(err, req);
-    return res.status(500).json({ message: "Unable to create document" });
+    return res.status(400).json({ message: "Failed to create document" });
   }
 }
 
