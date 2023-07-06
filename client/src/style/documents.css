@@ -36,6 +36,15 @@
   max-width: 27rem;
 }
 
+.ReactMarkdown h1,
+.ReactMarkdown h2,
+.ReactMarkdown h3 {
+  padding: 1rem 0;
+}
+.ReactMarkdown ul {
+  padding-left: 2rem;
+}
+
 .Documents table button {
   width: 2.5rem;
   height: 2.5rem;

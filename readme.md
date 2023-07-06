@@ -1,26 +1,20 @@
-# Template for MERN projects
+# MERN Template Project
 
-### Home page
+This project serves as a template for MERN stack ([MongoDB](https://www.mongodb.com/), [Express.js](https://expressjs.com/), [React](https://react.dev/), [Node.js](https://nodejs.org/en)) applications, providing a backend and frontend implementation for creating, reading, updating, and deleting simple text documents. The template is based on the [MVC](https://developer.mozilla.org/en-US/docs/Glossary/MVC) (Model View Controller) design pattern.
 
-- Example for fetching and displaying data from an open API
-- source: [GitHub REST API](https://docs.github.com/en/rest)
+The aim of this template is to shorten the initial setup time and provide a clean, consistent and relatively secure base for MERN projects.
 
-### Documents
+### Packages used
 
-- Simple full-stack CRUD app
-
-### Tech used
-
-- [Express JS](https://expressjs.com/) server
+- Server
   - [express-rate-limit](https://www.npmjs.com/package/express-rate-limit)
   - [helmet](https://www.npmjs.com/package/helmet)
   - [cors](https://www.npmjs.com/package/cors)
-- [MongoDB](https://www.mongodb.com/), [Mongoose JS](https://mongoosejs.com/docs/guide.html)
-- [Model View Controller](https://developer.mozilla.org/en-US/docs/Glossary/MVC) design pattern
-- [React](https://react.dev/) frontend
+- Database:
+  - [Mongoose JS](https://mongoosejs.com/docs/guide.html)
+- Frontend
   - [React Router](https://reactrouter.com/en/main)
   - [react-markdown](https://github.com/remarkjs/react-markdown)
-  - [react-syntax-highlighter](https://github.com/react-syntax-highlighter/react-syntax-highlighter)
   - [react-spinners](https://www.npmjs.com/package/react-spinners)
 
 # Requirements
